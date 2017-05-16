@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="boot2.css">
+    <title>IT Internship in Cebu</title>
+    <!-- BootstrapのCSS読み込み -->
+    <link href="bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- jQuery読み込み -->
+    <link href="js/jquery.bxslider.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/jquery.bxSlider.min.js"></script>
+    <!-- BootstrapのJS読み込み -->
+    <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <link href="css/font-awesome.min.css" rel="stylesheet"/>
+
+</head>
+<body>
+	<header>
+		<nav class="navbar navbar-default">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbarEexample1">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#">ITインターンin Cebu</a>
+				</div>
+				<div class="collapse navbar-collapse" id="navbarEexample1">
+					<ul class="nav navbar-nav">
+						<li class="menu"><a href="#" target=_blank>Home</a></li>
+						<li class="menu"><a href="#" target=_blank>Blog</a></li>
+						<li class="menu"><a href="#" target=_blank>Portfolio</a></li>
+						<li class="menu"><a href="#" target=_blank>Dream</a></li>
+						<li class="menu"><a href="#" target=_blank>Contact</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</header>
+
+<!-- Slider -->	
+	<ul class="bxslider">
+		<li><img src="img/banner.png" alt="" width="640" height="300"></li>
+		<li><img src="img/banner1.jpg" alt="" width="640" height="300"></li>
+		<li><img src="img/banner.png" alt="" width="640" height="300"></li>
+		<li><img src="img/banner1.jpg" alt="" width="640" height="300"></li>
+	</ul>
+	
+	<div class="container">
+		<section class="one-third">
+			<h3>Profile</h3>
+			<a href="#"><img src="img/banner.png"></a>
+			<p>I am now studying programming in Cebu.
+			I quit the previous job 6 months after I started it.
+			Why I quit it so soon? It is mainly because I thought I have to try to work in foreign country.</p>
+		</section>
+		<section class="one-third">
+			<h3>Portfolio</h3>
+			<a href="#"><img src="img/banner1.jpg"></a>
+			<p>Here is my work since I came to Cebu. These are the websites or designs which I worked with engineers from Philipines together.
+			You will see some interesting work here. Please take a look.</p>
+		</section>
+		<section class="one-third">
+			<h3>Contact</h3>
+			<a href="#"><img src="img/banner.png"></a>
+			<p>Here is my phone, E-mail address, skype or anything like personal information, 
+			which means you could contact me. If you are interested in me, feel free to contact.</p>
+		</section>
+	</div>
+	
+<!-- Pricing table -->	
+	<div id="pricing-table" class="clear">
+    <div class="plan">
+        <h3>Work1</h3>
+        <a class="signup" href="">View</a>         
+        <ul>
+            <li><b>株式会社〇〇〇</b></li>
+            <li><b>2017/04</b></li>
+            <li><b>制作期間 :</b> 2ヵ月</li>          
+        </ul> 
+    </div>
+	<div class="plan">
+        <h3>Work2</h3>
+        <a class="signup" href="">View</a>         
+        <ul>
+            <li><b>株式会社〇〇〇</b></li>
+            <li><b>2017/06</b></li>
+            <li><b>制作期間 :</b> 6ヵ月</li>           
+        </ul> 
+    </div>
+    <div class="plan">
+        <h3>Work3</h3>
+        <a class="signup" href="">View</a>         
+        <ul>
+            <li><b>株式会社〇〇〇</b></li>
+            <li><b>2017/09</b></li>
+            <li><b>制作期間 :</b> 4ヵ月</li>            
+        </ul> 
+    </div>
+</div><br>
+<div class="read-more">
+	<a class="signup" href="">Read More</a>
+</div>
+	
+<!-- contact form -->
+	<form>
+		<div class="form-group">
+			<label for="text">名前</label>
+			<input type="text" class="form-control" id="text" placeholder="フルネーム">
+		</div>
+		<div class="form-group">
+			<label for="email">メールアドレス</label>
+			<input type="email" class="form-control" id="email" placeholder="メールアドレス">
+		</div>
+		<div class="form-group">
+			<label for="textarea">内容</label>
+			<input type="textarea" class="form-control" id="textarea" placeholder="ご自由にお書きください">
+		</div>
+		<div class="form-group">
+			<label for="file">添付ファイル</label>
+			<input type="file" id="file">
+		</div>
+		<div class="check">
+		</div>
+		<button type="submit" class="btn btn-default">送信</button>
+<!-- <div class="dropdown">
+		<button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">Select
+		<span class="caret"></span></button>
+		<ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+			<li role="presentation"><a role="menuitem" tabindex="-1" href="#">HTML</a></li>
+			<li role="presentation"><a role="menuitem" tabindex="-1" href="#">CSS</a></li>
+			<li role="presentation"><a role="menuitem" tabindex="-1" href="#">JavaScript</a></li>
+		<li role="presentation" class="divider"></li>
+			<li role="presentation"><a role="menuitem" tabindex="-1" href="#">About Us</a></li>
+		</ul>
+	</div> -->
+	</form>
+	<footer class="footer">
+	<div id="modal-content">
+		<!-- モーダルウィンドウのコンテンツ開始 -->
+		<p>Test</p>
+		<p id="modal-close" class="button-link">X</p>
+		<!-- モーダルウィンドウのコンテンツ終了 -->
+	</div>
+	<button id="modal-open" class="button-link">About Me</button>
+<!-- Start Footer -->
+		<ul class="social">
+			<li><a href="http://facebook.com" target=_blank><i class="fa fa-facebook"></i></a></li>
+			<li><a href="http://twitter.com" target=_blank><i class="fa fa-twitter"></i></a></li>
+			<li><a href="http://instagram.com" target=_blank><i class="fa fa-instagram"></i></a></li>
+		</ul>
+	</footer>
+	
+<!-- Dropdown -->
+<!-- 	<div class="btn-group">
+	<a href="#" class="btn btn-default">
+		選択してください
+	</a>
+	<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+		<span class="caret"></span>
+	</button>
+	<ul class="dropdown-menu" role="menu">
+		<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Profile</a></li>
+		<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Portfolio</a></li>
+		<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Contact</a></li>
+		<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Work</a></li>
+		<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Contact Form</a></li>
+	</ul>
+</div> -->
+
+<!-- ここまでモーダルウィンドウ -->
+	</footer>
+<div class="modal-call">
+	<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#sampleModal">
+	お問い合わせ
+	</button>
+</div>
+
+<div class="top">
+		<p class="toTop">ページトップへ</p>
+	</div>
+
+<!-- モーダル・ダイアログ -->
+<div class="modal fade" id="sampleModal" tabindex="-1">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"><span>×</span></button>
+				<h4 class="modal-title">お問い合わせ先</h4>
+			</div>
+			<div class="modal-body">
+				メールアドレス : ul121155@gmail.com
+			</div>
+			<div class="modal-body">
+				電話番号 : +63 9497396331
+			</div>
+			<div class="modal-body">
+				Facebook : <a href="facebook.com">Facebook</a>
+			</div>
+			<div class="modal-body">
+				Twitter : <a href="http://twitter.com">Twitter</a>
+			</div>
+			<div class="modal-body">
+				Instagram : <a href="http://instagram.com">Instagram</a>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">閉じる</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+/* トップへスクロール */
+$(function(){
+	  $('.toTop').click(function () {
+	    $('body,html').animate({
+	      scrollTop: 0
+	    }, 800);
+	    return false;
+	  });
+	});
+	
+/* Modal */
+$(function(){
+
+//モーダルウィンドウを出現させるクリックイベント
+$("#modal-open").click( function(){
+
+	//キーボード操作などにより、オーバーレイが多重起動するのを防止する
+	$( this ).blur() ;	//ボタンからフォーカスを外す
+	if( $( "#modal-overlay" )[0] ) return false ;		//新しくモーダルウィンドウを起動しない (防止策1)
+	//if($("#modal-overlay")[0]) $("#modal-overlay").remove() ;		//現在のモーダルウィンドウを削除して新しく起動する (防止策2)
+
+	//オーバーレイを出現させる
+	$( "body" ).append( '<div id="modal-overlay"></div>' ) ;
+	$( "#modal-overlay" ).fadeIn( "slow" ) ;
+
+	//コンテンツをセンタリングする
+	centeringModalSyncer() ;
+
+	//コンテンツをフェードインする
+	$( "#modal-content" ).fadeIn( "slow" ) ;
+
+	//[#modal-overlay]、または[#modal-close]をクリックしたら…
+	$( "#modal-overlay,#modal-close" ).unbind().click( function(){
+
+		//[#modal-content]と[#modal-overlay]をフェードアウトした後に…
+		$( "#modal-content,#modal-overlay" ).fadeOut( "slow" , function(){
+
+			//[#modal-overlay]を削除する
+			$('#modal-overlay').remove() ;
+
+		} ) ;
+
+	} ) ;
+
+} ) ;
+
+//リサイズされたら、センタリングをする関数[centeringModalSyncer()]を実行する
+$( window ).resize( centeringModalSyncer ) ;
+
+	//センタリングを実行する関数
+	function centeringModalSyncer() {
+
+		//画面(ウィンドウ)の幅、高さを取得
+		var w = $( window ).width() ;
+		var h = $( window ).height() ;
+
+		// コンテンツ(#modal-content)の幅、高さを取得
+		// jQueryのバージョンによっては、引数[{margin:true}]を指定した時、不具合を起こします。
+//		var cw = $( "#modal-content" ).outerWidth( {margin:true} );
+//		var ch = $( "#modal-content" ).outerHeight( {margin:true} );
+		var cw = $( "#modal-content" ).outerWidth();
+		var ch = $( "#modal-content" ).outerHeight();
+
+		//センタリングを実行する
+		$( "#modal-content" ).css( {"left": ((w - cw)/2) + "px","top": ((h - ch)/2) + "px"} ) ;
+
+	}
+
+} ) ;
+/* Slider from scratch */
+	$(function() {
+		var position = 0,
+		sliderImages = $('.container div'),
+		sliderNum = sliderImages.length;
+
+		function sliderFunction() {
+			var sliderPosition = $('.container div').eq(position);
+			sliderImages.hide();
+			sliderPosition.css('display', 'inline-block');
+			}
+
+		var autorunSlider = setInterval(function() {
+			position += 1;
+			if (position > sliderNum - 1) {
+				position = 0;
+			}
+			sliderFunction();
+		}, 3000);
+
+		$('.next').click(function() {
+			clearInterval(autorunSlider);
+			position += 1;
+			if (position > sliderNum - 1) {
+				position = 0;
+			}
+			sliderFunction();
+		});
+
+		$('.prev').click(function() {
+			clearInterval(autorunSlider);
+			position -= 1;
+			if (position < 0) {
+				position = sliderNum - 1;
+			}
+			sliderFunction();
+		});
+	});
+	
+/* bxSlider*/
+$(document).ready(function() {
+	var slider = $('.bxslider').bxSlider({
+		auto: true,
+		onSlideAfter: function() {
+			slider.startAuto();
+		}
+	});
+});
+
+</script>
+	<!-- <script src="js/jquery.bxslider.min.js"></script> --><!--For Image Slider-->
+	<!-- <div class="slider-wrap">
+		<section class="slider">
+			<ul class="slider1">
+				<li><img src="img/Visited (1).png"></li>
+				<li><img src="img/banner1.jpg"></li>
+				<li><img src="img/banner.png"></li>
+			</ul>
+		</section>
+	</div> -->
+		
+<!-- <script type="text/javascript">
+		$('.slider1').bxSlider({
+			mode: 'fade',
+			captions: false,
+			auto:true,
+			pager:false,
+				
+		});
+		$('.slider2').bxSlider({
+			pager:false,
+			captions: true,
+			maxSlides: 3,
+			minSlides: 1,
+			slideWidth: 230,
+			slideMargin: 10
+		});
+		$('.slider3').bxSlider({
+			mode: 'fade',
+			captions: false,
+			auto:true,
+			pager:false,
+			controls:false,
+		});
+			
+</script> -->
+
+</body>
+</html>
