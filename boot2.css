@@ -416,17 +416,10 @@ div.top {
 	text-align: center;
 }
 #modal-content > p:nth-child(1) {
-    width: 10%;
-    display: inline-block;
+	float: left;
     margin: 0;
+    text-align: right;
 }
-#modal-close {
-    display: inline-block;
-    margin-top: -20px;
-    width: 0%;
-    float: right;
-}
-
 .modal-call {
     width: 100%;
     margin: 0 auto;
