@@ -401,7 +401,6 @@ div.top {
 }
 
 .button-link {
-	width: 100%;
     margin-top: 30px;
     margin: 0;
     padding: 15px;
@@ -412,11 +411,11 @@ div.top {
 	cursor: pointer ;
     color: #0bd;
 }
-#modal-content > p:nth-child(1){
+#modal-content > button{
 	text-align: center;
 }
-#modal-content > p:nth-child(1) {
-	float: left;
+#modal-content > button {
+	float: right;
     margin: 0;
     text-align: right;
 }
