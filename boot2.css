@@ -140,10 +140,10 @@ body > section:nth-child(2) > a > img, body > section:nth-child(3) > a > img, bo
     border-radius: 5px 0 0 5px;        
 	width: 33%;
 }
-#pricing-table > div:nth-child(2){
+#pricing-table #plan2{
 	width: 33%;
 }
-#pricing-table > div:nth-child(3){
+#pricing-table #plan3{
     border-radius: 0px 5px 5px 0px;	
 	width: 33%;	
 }
@@ -391,8 +391,7 @@ footer {
     font-size: 14px;
     text-indent: 2%;
 }
-.close {
-	opacity: 1 !important;
+.close-button {
 	padding: 15px;
 }
 #modal-content{
@@ -405,6 +404,7 @@ footer {
 	display: none ;
 	z-index: 2 ;
 	text-align: center;
+    border-radius: 6px;
 }
 #popup1,#popup2,#popup3{
 	width: 100% ;
@@ -421,7 +421,7 @@ footer {
 #popup-content2,
 #popup-content3{
 	background: #fff;
-	height: 70%;
+	height: auto;
 	border-radius: 6px;
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
     width: 50%;
