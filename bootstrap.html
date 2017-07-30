@@ -76,7 +76,7 @@
 	
 <!-- Pricing table -->	
 	<div id="pricing-table" class="clear">
-    <div class="plan">
+    <div id="plan">
         <h3>Work1</h3>
         <a class="signup" href="">View</a>         
         <ul>
@@ -85,7 +85,7 @@
             <li><b>制作期間 :</b> 2ヵ月</li>          
         </ul> 
     </div>
-	<div class="plan">
+	<div id="plan2">
         <h3>Work2</h3>
         <a class="signup" href="">View</a>         
         <ul>
@@ -94,7 +94,7 @@
             <li><b>制作期間 :</b> 6ヵ月</li>           
         </ul> 
     </div>
-    <div class="plan">
+    <div id="plan3">
         <h3>Work3</h3>
         <a class="signup" href="">View</a>         
         <ul>
@@ -104,6 +104,30 @@
         </ul> 
     </div>
 </div><br>
+	<div id="popup1">
+		<!-- モーダルウィンドウのコンテンツ開始 -->
+		<p>TestTestTestTestTestTestTestTest
+		TestTestTestTestTestTestTestTest
+		TestTestTestTestTestTestTestTest
+		tTestTestTesttTestTestTesttTestTestTest</p>
+		<!-- モーダルウィンドウのコンテンツ終了 -->
+	</div>
+	<div id="popup2">
+		<!-- モーダルウィンドウのコンテンツ開始 -->
+		<p>Test2Test2Test2Test2Test2Test2
+		Test2Test2Test2Test2Test2Test2Test2
+		Test2Test2Test2Test2Test2Test2Test2
+		Test2Test2Test2Test2Test2Test2Test2</p>
+		<!-- モーダルウィンドウのコンテンツ終了 -->
+	</div>
+	<div id="popup3">
+		<!-- モーダルウィンドウのコンテンツ開始 -->
+		<p>Test3Test3Test3Test3Test3Test3
+		Test3Test3Test3Test3Test3Test3Test3
+		Test3Test3Test3Test3Test3Test3Test3
+		Test3Test3Test3Test3Test3Test3Test3Test3</p>
+		<!-- モーダルウィンドウのコンテンツ終了 -->
+	</div>
 <div class="read-more">
 	<a class="signup" href="">Read More</a>
 </div>
@@ -144,7 +168,6 @@
 	<footer class="footer">
 	<div id="modal-content">
 		<!-- モーダルウィンドウのコンテンツ開始 -->
-		<button id="modal-close" class="button-link">X</button>
 		<p>TestTestTestTestTestTestTestTest
 		TestTestTestTestTestTestTestTest
 		TestTestTestTestTestTestTestTest
@@ -219,6 +242,42 @@
 </div>
 
 <script>
+$(document).ready(function() {
+	$("#plan a").click(function(e) {
+		e.preventDefault();
+		$("#popup1").addClass("show");
+	});
+});
+$(document).ready(function() {
+	$("#popup1").click(function() {
+		$("#popup1").removeClass("show");
+	});
+});
+
+$(document).ready(function() {
+	$("#plan2 a").click(function(e) {
+		e.preventDefault();
+		$("#popup2").addClass("show");
+	});
+});
+$(document).ready(function() {
+	$("#popup2").click(function() {
+		$("#popup2").removeClass("show");
+	});
+});
+
+$(document).ready(function() {
+	$("#plan3 a").click(function(e) {
+		e.preventDefault();
+		$("#popup3").addClass("show");
+	});
+});
+$(document).ready(function() {
+	$("#popup3").click(function() {
+		$("#popup3").removeClass("show");
+	});
+});
+
 $(function() {
 	//back-to-topの非表示
 	$('#back-to-top').hide();

@@ -113,7 +113,7 @@ body > section:nth-child(2) > a > img, body > section:nth-child(3) > a > img, bo
     width: 90%;
 }
 
-#pricing-table .plan {
+#pricing-table #plan,#plan2,#plan3 {
     font: 12px Arial, Helvetica;
     text-shadow: 0 1px rgba(255,255,255,.8);        
     background: #fff;      
@@ -134,7 +134,9 @@ body > section:nth-child(2) > a > img, body > section:nth-child(3) > a > img, bo
     box-shadow: 20px 0 10px -10px rgba(0, 0, 0, .15), -20px 0 10px -10px rgba(0, 0, 0, .15);    
 }
 
-#pricing-table .plan:nth-child(1) {
+#pricing-table #plan,
+#pricing-table #plan2,
+#pricing-table #plan3 {
     border-radius: 5px 0 0 5px;        
 	width: 33%;
 }
@@ -145,7 +147,7 @@ body > section:nth-child(2) > a > img, body > section:nth-child(3) > a > img, bo
     border-radius: 0px 5px 5px 0px;	
 	width: 33%;	
 }
-#pricing-table .plan:nth-child(4) {
+#pricing-table #plan:nth-child(4) {
     border-radius: 0 5px 5px 0;        
 }
 
@@ -166,11 +168,11 @@ body > section:nth-child(2) > a > img, body > section:nth-child(3) > a > img, bo
     border-radius: 5px 5px 0 0;         
 }
 
-#pricing-table .plan:nth-child(1) h3 {
+#pricing-table #plan:nth-child(1) h3 {
     border-radius: 5px 0 0 0;       
 }
 
-#pricing-table .plan:nth-child(4) h3 {
+#pricing-table #plan:nth-child(4) h3 {
     border-radius: 0 5px 0 0;       
 }   
 
@@ -372,7 +374,7 @@ footer {
     box-shadow: 0 0 3px rgba(0, 0, 0, .7) inset; 
 } */
 /* Modal */
-#modal-content {
+#modal-content{
 	width: 50% ;
 	margin: 0 ;
 	padding: 10px 20px ;
@@ -382,6 +384,31 @@ footer {
 	display: none ;
 	z-index: 2 ;
 	text-align: center;
+}
+#popup1,#popup2,#popup3{
+	width: 100% ;
+	margin: 0 auto;
+	padding: 10px 20px ;
+	border: 2px solid #aaa ;
+	background: rgba(0, 0, 0, 0.33);
+	position: fixed ;
+	display: none ;
+	z-index: 2 ;
+	text-align: center;
+}
+#popup1 p, #popup2 p, #popup3 p{
+	background: #fff;
+	height: 50%;
+}
+.show {
+	display: block !important;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 99;
+	background: rgba(0, 0, 0, 0.33);
 }
 #modal-open {
     background: #0bd;
