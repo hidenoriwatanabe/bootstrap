@@ -76,7 +76,7 @@
 	
 <!-- Pricing table -->	
 	<div id="pricing-table" class="clear">
-    <div class="plan">
+    <div id="plan">
         <h3>Work1</h3>
         <a class="signup" href="">View</a>         
         <ul>
@@ -85,7 +85,7 @@
             <li><b>制作期間 :</b> 2ヵ月</li>          
         </ul> 
     </div>
-	<div class="plan">
+	<div id="plan2">
         <h3>Work2</h3>
         <a class="signup" href="">View</a>         
         <ul>
@@ -94,7 +94,7 @@
             <li><b>制作期間 :</b> 6ヵ月</li>           
         </ul> 
     </div>
-    <div class="plan">
+    <div id="plan3">
         <h3>Work3</h3>
         <a class="signup" href="">View</a>         
         <ul>
@@ -104,6 +104,75 @@
         </ul> 
     </div>
 </div><br>
+	<div id="popup1">
+	<div id="popup-content1">
+		<!-- モーダルウィンドウのコンテンツ開始 -->
+		<div class="title">
+			<p>Title</p>
+		</div>
+		<div class="detail">
+			<ul>
+				<li>info1</li>
+				<li>info1</li>
+				<li>info1</li>
+				<li>info1</li>
+				<li>info1</li>
+			</ul>
+		</div>
+		<div class="close-field">
+		<div class="close-button">
+			<button type="button" class="btn btn-default" data-dismiss="modal">閉じる</button>
+		</div>
+		</div>
+	</div>
+		<!-- モーダルウィンドウのコンテンツ終了 -->
+	</div>
+	<div id="popup2">
+	<div id="popup-content2">
+		<!-- モーダルウィンドウのコンテンツ開始 -->
+		<div class="title">
+			<p>Title</p>
+		</div>
+		<div class="detail">
+			<ul>
+				<li>info1</li>
+				<li>info1</li>
+				<li>info1</li>
+				<li>info1</li>
+				<li>info1</li>
+			</ul>
+		</div>
+		<div class="close-field">
+		<div class="close-button">
+			<button type="button" class="btn btn-default" data-dismiss="modal">閉じる</button>
+		</div>
+		</div>
+	</div>
+		<!-- モーダルウィンドウのコンテンツ終了 -->
+	</div>
+	<div id="popup3">
+	<div id="popup-content3">
+		<!-- モーダルウィンドウのコンテンツ開始 -->
+		<div class="title">
+			<p>Title</p>
+		</div>
+		<div class="detail">
+			<ul>
+				<li>info1</li>
+				<li>info1</li>
+				<li>info1</li>
+				<li>info1</li>
+				<li>info1</li>
+			</ul>
+		</div>
+		<div class="close-field">
+		<div class="close-button">
+			<button type="button" class="btn btn-default" data-dismiss="modal">閉じる</button>
+		</div>
+		</div>
+	</div>
+		<!-- モーダルウィンドウのコンテンツ終了 -->
+	</div>
 <div class="read-more">
 	<a class="signup" href="">Read More</a>
 </div>
@@ -144,7 +213,6 @@
 	<footer class="footer">
 	<div id="modal-content">
 		<!-- モーダルウィンドウのコンテンツ開始 -->
-		<button id="modal-close" class="button-link">X</button>
 		<p>TestTestTestTestTestTestTestTest
 		TestTestTestTestTestTestTestTest
 		TestTestTestTestTestTestTestTest
@@ -185,9 +253,8 @@
 	</button>
 </div>
 
-<div class="top">
-		<p class="toTop">ページトップへ</p>
-	</div>
+<div id="back-to-top"><a href="#"><img src="img/up-arrow.png"></a></div>
+	<div id="pos"></div>
 
 <!-- モーダル・ダイアログ -->
 <div class="modal fade" id="sampleModal" tabindex="-1">
@@ -220,16 +287,64 @@
 </div>
 
 <script>
+$(document).ready(function() {
+	$("#plan a").click(function(e) {
+		e.preventDefault();
+		$("#popup1").addClass("show");
+	});
+});
+$(document).ready(function() {
+	$("#popup1").click(function() {
+		$("#popup1").removeClass("show");
+	});
+});
+
+$(document).ready(function() {
+	$("#plan2 a").click(function(e) {
+		e.preventDefault();
+		$("#popup2").addClass("show");
+	});
+});
+$(document).ready(function() {
+	$("#popup2").click(function() {
+		$("#popup2").removeClass("show");
+	});
+});
+
+$(document).ready(function() {
+	$("#plan3 a").click(function(e) {
+		e.preventDefault();
+		$("#popup3").addClass("show");
+	});
+});
+$(document).ready(function() {
+	$("#popup3").click(function() {
+		$("#popup3").removeClass("show");
+	});
+});
+
+$(function() {
+	//back-to-topの非表示
+	$('#back-to-top').hide();
+	//スクロールが十分されたらbck-to-topを表示、スクロールが戻ったら非表示
+	$(window).scroll(function() {
+		$('#pos').text($(this).scrollTop());
+		if ($(this).scrollTop() > 240) {
+			$('#back-to-top').fadeIn();
+		} else {
+			$('#back-to-top').fadeOut();
+		}
+	});
+});
 /* トップへスクロール */
 $(function(){
-	  $('.toTop').click(function () {
-	    $('body,html').animate({
-	      scrollTop: 0
-	    }, 800);
-	    return false;
-	  });
+	$('#back-to-top a').click(function() {
+		$('body').animate({
+			scrollTop:0
+		}, 300);
+		return false;
 	});
-	
+});
 /* Modal */
 $(function(){
 
@@ -238,57 +353,42 @@ $("#modal-open").click( function(){
 
 	//キーボード操作などにより、オーバーレイが多重起動するのを防止する
 	$( this ).blur() ;	//ボタンからフォーカスを外す
-	if( $( "#modal-overlay" )[0] ) return false ;		//新しくモーダルウィンドウを起動しない (防止策1)
-	//if($("#modal-overlay")[0]) $("#modal-overlay").remove() ;		//現在のモーダルウィンドウを削除して新しく起動する (防止策2)
-
+	if( $( "#modal-overlay" )[0] ) return false ;//新しくモーダルウィンドウを起動しない (防止策1)
+	//if($("#modal-overlay")[0]) $("#modal-overlay").remove() ;//現在のモーダルウィンドウを削除して新しく起動する (防止策2)
 	//オーバーレイを出現させる
 	$( "body" ).append( '<div id="modal-overlay"></div>' ) ;
 	$( "#modal-overlay" ).fadeIn( "slow" ) ;
-
 	//コンテンツをセンタリングする
 	centeringModalSyncer() ;
-
 	//コンテンツをフェードインする
 	$( "#modal-content" ).fadeIn( "slow" ) ;
-
 	//[#modal-overlay]、または[#modal-close]をクリックしたら…
 	$( "#modal-overlay,#modal-close" ).unbind().click( function(){
-
 		//[#modal-content]と[#modal-overlay]をフェードアウトした後に…
 		$( "#modal-content,#modal-overlay" ).fadeOut( "slow" , function(){
-
 			//[#modal-overlay]を削除する
 			$('#modal-overlay').remove() ;
-
-		} ) ;
-
-	} ) ;
-
-} ) ;
+		}) ;
+	}) ;
+}) ;
 
 //リサイズされたら、センタリングをする関数[centeringModalSyncer()]を実行する
 $( window ).resize( centeringModalSyncer ) ;
-
 	//センタリングを実行する関数
 	function centeringModalSyncer() {
-
 		//画面(ウィンドウ)の幅、高さを取得
 		var w = $( window ).width() ;
 		var h = $( window ).height() ;
-
 		// コンテンツ(#modal-content)の幅、高さを取得
 		// jQueryのバージョンによっては、引数[{margin:true}]を指定した時、不具合を起こします。
 //		var cw = $( "#modal-content" ).outerWidth( {margin:true} );
 //		var ch = $( "#modal-content" ).outerHeight( {margin:true} );
 		var cw = $( "#modal-content" ).outerWidth();
 		var ch = $( "#modal-content" ).outerHeight();
-
 		//センタリングを実行する
-		$( "#modal-content" ).css( {"left": ((w - cw)/2) + "px","top": ((h - ch)/2) + "px"} ) ;
-
+		$( "#modal-content" ).css( {"left": ((w - cw)/2) + "px","top": ((h - ch)/2) + "px"});
 	}
-
-} ) ;
+});
 /* Slider from scratch */
 	$(function() {
 		var position = 0,

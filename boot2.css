@@ -113,7 +113,7 @@ body > section:nth-child(2) > a > img, body > section:nth-child(3) > a > img, bo
     width: 90%;
 }
 
-#pricing-table .plan {
+#pricing-table #plan,#plan2,#plan3 {
     font: 12px Arial, Helvetica;
     text-shadow: 0 1px rgba(255,255,255,.8);        
     background: #fff;      
@@ -134,18 +134,20 @@ body > section:nth-child(2) > a > img, body > section:nth-child(3) > a > img, bo
     box-shadow: 20px 0 10px -10px rgba(0, 0, 0, .15), -20px 0 10px -10px rgba(0, 0, 0, .15);    
 }
 
-#pricing-table .plan:nth-child(1) {
+#pricing-table #plan,
+#pricing-table #plan2,
+#pricing-table #plan3 {
     border-radius: 5px 0 0 5px;        
 	width: 33%;
 }
-#pricing-table > div:nth-child(2){
+#pricing-table #plan2{
 	width: 33%;
 }
-#pricing-table > div:nth-child(3){
+#pricing-table #plan3{
     border-radius: 0px 5px 5px 0px;	
 	width: 33%;	
 }
-#pricing-table .plan:nth-child(4) {
+#pricing-table #plan:nth-child(4) {
     border-radius: 0 5px 5px 0;        
 }
 
@@ -166,11 +168,11 @@ body > section:nth-child(2) > a > img, body > section:nth-child(3) > a > img, bo
     border-radius: 5px 5px 0 0;         
 }
 
-#pricing-table .plan:nth-child(1) h3 {
+#pricing-table #plan:nth-child(1) h3 {
     border-radius: 5px 0 0 0;       
 }
 
-#pricing-table .plan:nth-child(4) h3 {
+#pricing-table #plan:nth-child(4) h3 {
     border-radius: 0 5px 0 0;       
 }   
 
@@ -337,13 +339,23 @@ footer {
 /*  color: #000;
     margin: 20px 0; */
 }
-div.top > p{
-    line-height: 155%;
-    padding: 1%;
+#back-to-top{
+	position:fixed;
+	right:5px;
+	bottom:5px;
 }
-
+#pos{
+	position:fixed;
+	left:5px;
+	bottom:5px;
+	display: none;
+}
+#back-to-top img {
+    width: 20%;
+    margin-right: 0;
+}
 /* トップへスクロール */
-div.top {
+/* #back-to-top {
     background: #0bd;
     text-align: center;
     color: #fff;
@@ -356,13 +368,33 @@ div.top {
     text-shadow: 0 1px 0 rgba(0,0,0,.3);
     display: inline-block;
 }
-.top:active, .top:focus {
+#back-to-top:active, #back-to-top:focus {
     background: #0bd;       
     top: 2px;
     box-shadow: 0 0 3px rgba(0, 0, 0, .7) inset; 
-}
+} */
 /* Modal */
-#modal-content {
+.title {
+	border-bottom: 1px solid #eee;
+}
+.title p, .detail {
+	text-align: left;
+	font-size: 18px;
+	margin: 0;
+}
+.detail {
+	border-bottom: 1px solid #eee;
+}
+.detail ul li {
+	list-style-type: none;
+	padding: 15px;
+    font-size: 14px;
+    text-indent: 2%;
+}
+.close-button {
+	padding: 15px;
+}
+#modal-content{
 	width: 50% ;
 	margin: 0 ;
 	padding: 10px 20px ;
@@ -372,6 +404,38 @@ div.top {
 	display: none ;
 	z-index: 2 ;
 	text-align: center;
+    border-radius: 6px;
+}
+#popup1,#popup2,#popup3{
+	width: 100% ;
+	margin: 0 auto;
+	padding: 10px 20px ;
+	border: 2px solid #aaa ;
+	background: rgba(0, 0, 0, 0.33);
+	position: fixed ;
+	display: none ;
+	z-index: 2 ;
+	text-align: center;
+}
+#popup-content1,
+#popup-content2,
+#popup-content3{
+	background: #fff;
+	height: auto;
+	border-radius: 6px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    width: 50%;
+    margin: 0 auto;
+}
+.show {
+	display: block !important;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 99;
+	background: rgba(0, 0, 0, 0.33);
 }
 #modal-open {
     background: #0bd;
@@ -397,7 +461,7 @@ div.top {
 	left: 0 ;
 	width: 100% ;
 	height: 120% ;
-	background-color: rgba( 0,0,0, 0.75 ) ;
+	background-color: rgba(0, 0, 0, 0.33); ;
 }
 
 .button-link {
