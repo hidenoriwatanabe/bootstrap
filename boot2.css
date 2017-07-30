@@ -374,6 +374,27 @@ footer {
     box-shadow: 0 0 3px rgba(0, 0, 0, .7) inset; 
 } */
 /* Modal */
+.title {
+	border-bottom: 1px solid #eee;
+}
+.title p, .detail {
+	text-align: left;
+	font-size: 18px;
+	margin: 0;
+}
+.detail {
+	border-bottom: 1px solid #eee;
+}
+.detail ul li {
+	list-style-type: none;
+	padding: 15px;
+    font-size: 14px;
+    text-indent: 2%;
+}
+.close {
+	opacity: 1 !important;
+	padding: 15px;
+}
 #modal-content{
 	width: 50% ;
 	margin: 0 ;
@@ -396,9 +417,15 @@ footer {
 	z-index: 2 ;
 	text-align: center;
 }
-#popup1 p, #popup2 p, #popup3 p{
+#popup-content1,
+#popup-content2,
+#popup-content3{
 	background: #fff;
-	height: 50%;
+	height: 70%;
+	border-radius: 6px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    width: 50%;
+    margin: 0 auto;
 }
 .show {
 	display: block !important;
@@ -434,7 +461,7 @@ footer {
 	left: 0 ;
 	width: 100% ;
 	height: 120% ;
-	background-color: rgba( 0,0,0, 0.75 ) ;
+	background-color: rgba(0, 0, 0, 0.33); ;
 }
 
 .button-link {
